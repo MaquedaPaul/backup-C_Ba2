@@ -1,0 +1,1 @@
+Asegurarse de siempre hacer make clean para recompilar desde cero
