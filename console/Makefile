@@ -1,5 +1,5 @@
 CC = gcc
-OUTFILE = mod1.out
+OUTFILE = console.out
 
 ### Reglas ###
 

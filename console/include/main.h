@@ -1,5 +1,5 @@
-#ifndef MOD1_MAIN_H_
-#define MOD1_MAIN_H_
+#ifndef CONSOLE_MAIN_H_
+#define CONSOLE_MAIN_H_
 
 #include <stdlib.h>
 

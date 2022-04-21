@@ -1,4 +1,4 @@
-#ifndef MOD2_MAIN_H_
-#define MOD2_MAIN_H_
+#ifndef KERNEL_MAIN_H_
+#define KERNEL_MAIN_H_
 
 #endif

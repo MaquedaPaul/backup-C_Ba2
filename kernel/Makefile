@@ -1,5 +1,5 @@
 CC = gcc
-OUTFILE = mod2.out
+OUTFILE = kernel.out
 
 ### Reglas ###
 

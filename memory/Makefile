@@ -1,5 +1,5 @@
 CC = gcc
-OUTFILE = mod3.out
+OUTFILE = memory.out
 
 ### Reglas ###
 

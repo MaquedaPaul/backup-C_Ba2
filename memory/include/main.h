@@ -1,4 +1,4 @@
-#ifndef MOD3_MAIN_H_
-#define MOD3_MAIN_H_
+#ifndef MEMORY_MAIN_H_
+#define MEMORY_MAIN_H_
 
 #endif
