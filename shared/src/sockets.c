@@ -104,8 +104,8 @@ int crear_conexion(t_log *logger, const char *server_name, char *ip, char *puert
 }
 
 // CERRAR CONEXION
-void liberar_conexion(int *socket_cliente)
+void liberar_conexion(int socket_cliente)
 {
-    close(*socket_cliente);
-    *socket_cliente = -1;
+    close(socket_cliente);
+    //*socket_cliente = -1;
 }
