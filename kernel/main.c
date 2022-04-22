@@ -11,7 +11,9 @@ void sighandler(int s)
 
 int main()
 {
-    signal(SIGINT, sighandler);
+    char *ip;
+    char *puerto;
+    signal(SIGINT, sighandler); // Para poder cerrar correctamente el programa apretando ¿ctrl+c?
     logger = iniciar_logger("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
 
     t_config *configKernelAsServer = iniciar_config("./server.config");

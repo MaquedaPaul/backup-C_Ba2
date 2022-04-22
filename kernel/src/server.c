@@ -1,4 +1,4 @@
-#include "../include/comunicacion.h"
+#include "../include/server.h"
 
 typedef struct
 {
