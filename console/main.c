@@ -4,7 +4,7 @@ int main()
 {
     t_log *logger = log_create("console.log", "CONSOLE", true, LOG_LEVEL_INFO);
 
-    int fd_kernel = 0; // fd_otroModulo = 0; //fd: file descriptor
+    int fd_kernel = 0; // fd_cpu = 0; //fd: file descriptor
 
     if (!generar_conexiones(logger, &fd_kernel))
     {
@@ -15,7 +15,7 @@ int main()
     int a;
 
     scanf("%d", &a);
-    send_string_and_number_phrase(fd_kernel, "Inception", 14);
+    send_string_and_number_phrase(fd_kernel, "A phrase", 14);
 
     // scanf("%d", &a);
     // send_twoNumbers(fd_cpu, 7, 8);
