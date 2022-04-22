@@ -3,4 +3,9 @@
 
 #include <stdlib.h>
 
+#include <commons/log.h>
+
+#include "init.h"
+#include "../../shared/include/sockets.h"
+
 #endif

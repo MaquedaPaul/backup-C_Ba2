@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "unistd.h": "c",
+        "sockets.h": "c",
+        "protocolo.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
