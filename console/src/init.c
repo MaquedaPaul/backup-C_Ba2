@@ -3,14 +3,14 @@
 bool generar_conexiones(t_log *logger, int *fd_kernel, int *fd_cpu)
 {
     // No hardcodear, levantar de config
-    char *ip;
-    char *puerto;
+    char *ip_kernel;
+    char *port_kernel;
 
     t_config *configKernelConnection = iniciar_config("./kernel.config");
-    ip = config_get_string_value(configKernelConnection, "IP");
-    log_info(logger, "IP Cargada %s", ip);
-    puerto = config_get_string_value(configKernelConnection, "PUERTO");
-    log_info(logger, "Puerto Cargado %s", puerto);
+    ip_kernel = config_get_string_value(configKernelConnection, "IP");
+    log_info(logger, "IP Cargada %s", ip_kernel);
+    port_kernel = config_get_string_value(configKernelConnection, "PUERTO");
+    log_info(logger, "Puerto Cargado %s", port_kernel);
 
     // char *port_kernel = "6969";
     //  char *port_mod3 = "4200";
@@ -29,7 +29,7 @@ bool generar_conexiones(t_log *logger, int *fd_kernel, int *fd_cpu)
             ip_cpu,
             port_cpu);
     */
-    return *fd_kernel != 0 //&& *fd_cpu != 0;
+    return *fd_kernel != 0; //&& *fd_cpu != 0;
 }
 
 void cerrar_programa(t_log *logger)
