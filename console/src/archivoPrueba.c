@@ -1,1 +1,3 @@
-asdsadas
+
+int funcion1();
+
