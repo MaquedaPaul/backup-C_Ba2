@@ -1,3 +1,6 @@
+#ifndef MEMORY_INIT_H
+#define MEMORY_INIT_H
+
 t_log *logger;
 t_config_memory *cfg;
 
@@ -21,3 +24,4 @@ static t_config_mrhq *initialize_cfg() // Inicializo en NULL para no tener basur
     cfg->PATH_SWAP = NULL;
     return cfg;
 }
+#endif

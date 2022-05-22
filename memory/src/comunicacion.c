@@ -93,7 +93,7 @@ void accesoAEspacioUsuario(int tipoPedido, int posicion)
         log("Se escribrio correctamente en la posicion %d", posicion);
         break;
     default:
-        fallar("No se reconocce el tipo de pedido %d", tipoPedido);
+        fallar("No se reconoce el tipo de pedido %d", tipoPedido);
         break;
     }
 }
