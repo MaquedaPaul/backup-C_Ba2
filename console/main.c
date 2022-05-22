@@ -1,24 +1,39 @@
 #include "include/main.h"
 
-int main()
-{
-    t_log *logger = log_create("console.log", "CONSOLE", true, LOG_LEVEL_INFO);
+int main() {
 
-    int fd_kernel = 0, fd_cpu = 0; // fd: file descriptor
+    t_log* logger = log_create("console.log", "CONSOLE", true, LOG_LEVEL_INFO);
 
-    if (!generar_conexiones(logger, &fd_kernel, &fd_cpu))
-    {
+    int fd_kernel=0; // fd significa file descriptor. Es el socket 
+    if (!generar_conexiones(logger,&fd_kernel)) {
         cerrar_programa(logger);
         return EXIT_FAILURE;
     }
 
+    // FILE *flujo = fopen("ejemplo.txt","r");
+    // 	if(flujo == NULL){
+    // 		perror("Error en la apertura del archivo txt");
+    // 		return 1;
+    // 	}
+
+    // while(feof(flujo) == 0){ //feof me devuelve !=0 si el flujo no esta vacio
+    // } 
+
+
     int a;
 
     scanf("%d", &a);
-    // send_string_and_number_phrase(fd_kernel, "A phrase", 14);
+    send_uint32_t(fd_kernel,5,NO_OP);
 
-    // scanf("%d", &a);
-    // send_twoNumbers(fd_cpu, 7, 8);
+    //send_mirar_netflix(fd_kernel, "Inception", 14);
+    
+    scanf("%d", &a);
+    //send_aprobar_operativos(fd_mod3, 7, 8);
+    send_uint32_t(fd_kernel,3000,IO);
+
+    scanf("%d", &a);
+    send_dos_uint32_t(fd_kernel,4,42,WRITE);
+
 
     scanf("%d", &a);
     cerrar_programa(logger);

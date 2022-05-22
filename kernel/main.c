@@ -13,17 +13,18 @@ int main()
 {
     char *ip;
     char *puerto;
-    signal(SIGINT, sighandler); // Para poder cerrar correctamente el programa apretando ¿ctrl+c?
-    logger = iniciar_logger("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
+
+    signal(SIGINT, sighandler); // Para poder cerrar correctamente el programa apretando CTRL + C
+    logger = log_create("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
 
     t_config *configKernelAsServer = iniciar_config("./server.config");
-    ip = config_get_string_value(configKernelAsServer, "IP");
+    ip = config_get_string_value(configKernelAsServer, "IP_KERNEL");
     log_info(logger, "IP Cargada %s", ip);
-    puerto = config_get_string_value(configKernelAsServer, "PUERTO");
+    puerto = config_get_string_value(configKernelAsServer, "PUERTO_KERNEL");
     log_info(logger, "Puerto Cargado %s", puerto);
+
     fd_kernel = iniciar_servidor(logger, "KERNEL", ip, puerto);
-    while (server_escuchar(logger, "KERNEL", fd_kernel))
-        ;
+    while (server_escuchar(logger, "KERNEL", fd_kernel));
 
     cerrar_programa(logger);
 

@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-asdsa
-=======
-asdsadas
->>>>>>> main

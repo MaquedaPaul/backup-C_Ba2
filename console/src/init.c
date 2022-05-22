@@ -1,34 +1,24 @@
 #include "../include/init.h"
 
-bool generar_conexiones(t_log *logger, int *fd_kernel, int *fd_cpu)
+bool generar_conexiones(t_log *logger, int *fd_kernel)
 {
     // No hardcodear, levantar de config
     char *ip_kernel;
-    char *port_kernel;
+    char *puerto_kernel;
 
     t_config *configKernelConnection = iniciar_config("./kernel.config");
-    ip_kernel = config_get_string_value(configKernelConnection, "IP");
+    ip_kernel = config_get_string_value(configKernelConnection, "IP_KERNEL");
     log_info(logger, "IP Cargada %s", ip_kernel);
-    port_kernel = config_get_string_value(configKernelConnection, "PUERTO");
-    log_info(logger, "Puerto Cargado %s", port_kernel);
+    puerto_kernel = config_get_string_value(configKernelConnection, "PUERTO_KERNEL");
+    log_info(logger, "Puerto Cargado %s", puerto_kernel);
 
     // char *port_kernel = "6969";
     //  char *port_mod3 = "4200";
     // char *ip_kernel = "0.0.0.0";
     //  char *ip_mod3 = "0.0.0.0";
 
-    *fd_kernel = crear_conexion(
-        logger,
-        "KERNEL",
-        ip_kernel,
-        port_kernel);
-    /*
-        *fd_cpu = crear_conexion(
-            logger,
-            "CPU",
-            ip_cpu,
-            port_cpu);
-    */
+    *fd_kernel = crear_conexion(logger,"KERNEL",ip_kernel, puerto_kernel); // es el que acopla, pero antes te tienen que estar esperando
+
     return *fd_kernel != 0; //&& *fd_cpu != 0;
 }
 

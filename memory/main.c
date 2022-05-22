@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "include/main.h"
 
 int main()
@@ -20,4 +21,3 @@ int main()
     liberar_conexion(&memory_server);
     cerrar_programa();
     return EXIT_SUCCESS;
-}
