@@ -65,26 +65,26 @@ bool recv_uint32_t(int fd, uint32_t *cantidad)
     le pongo el codigo de operacion como parametro de la funcion para cuando lo enviemos
 */
 
-static void *serializar_dos_uint32_t(uint32_t nota1, uint32_t nota2, op_code codigo_operacion)
+static void *serializar_dos_uint32_t(uint32_t param1, uint32_t param2, op_code codigo_operacion)
 {
     void *stream = malloc(sizeof(op_code) + sizeof(uint32_t) * 2);
 
     memcpy(stream, &codigo_operacion, sizeof(op_code));
-    memcpy(stream + sizeof(op_code), &nota1, sizeof(uint32_t));
-    memcpy(stream + sizeof(op_code) + sizeof(uint32_t), &nota2, sizeof(uint32_t));
+    memcpy(stream + sizeof(op_code), &param1, sizeof(uint32_t));
+    memcpy(stream + sizeof(op_code) + sizeof(uint32_t), &param2, sizeof(uint32_t));
     return stream;
 }
 
-static void deserializar_dos_uint32_t(void *stream, uint32_t *nota1, uint32_t *nota2)
+static void deserializar_dos_uint32_t(void *stream, uint32_t *param1, uint32_t *param2)
 {
-    memcpy(nota1, stream, sizeof(uint32_t));
-    memcpy(nota2, stream + sizeof(uint32_t), sizeof(uint32_t));
+    memcpy(param1, stream, sizeof(uint32_t));
+    memcpy(param2, stream + sizeof(uint32_t), sizeof(uint32_t));
 }
 
-bool send_dos_uint32_t(int fd, uint32_t nota1, uint32_t nota2, op_code codigo_operacion)
+bool send_dos_uint32_t(int fd, uint32_t param1, uint32_t param2, op_code codigo_operacion)
 {
     size_t size = sizeof(op_code) + sizeof(uint32_t) * 2;
-    void *stream = serializar_dos_uint32_t(nota1, nota2, codigo_operacion);
+    void *stream = serializar_dos_uint32_t(param1, param2, codigo_operacion);
     if (send(fd, stream, size, 0) != size)
     {
         free(stream);
@@ -94,7 +94,7 @@ bool send_dos_uint32_t(int fd, uint32_t nota1, uint32_t nota2, op_code codigo_op
     return true;
 }
 
-bool recv_dos_uint32_t(int fd, uint32_t *nota1, uint32_t *nota2)
+bool recv_dos_uint32_t(int fd, uint32_t *param1, uint32_t *param2)
 {
     size_t size = sizeof(uint32_t) * 2;
     void *stream = malloc(size);
@@ -105,7 +105,7 @@ bool recv_dos_uint32_t(int fd, uint32_t *nota1, uint32_t *nota2)
         return false;
     }
 
-    deserializar_dos_uint32_t(stream, nota1, nota2);
+    deserializar_dos_uint32_t(stream, param1, param2);
 
     free(stream);
     return true;
