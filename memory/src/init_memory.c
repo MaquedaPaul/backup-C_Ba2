@@ -1,4 +1,4 @@
-
+#include "../include/init_memory.h"
 // Declaro memoria y swap
 
 void *swap;
@@ -41,8 +41,8 @@ uint8_t cargar_configuracion(char *path)
         return 0;
     }
     cfg->PUERTO_ESCUCHA = config_get_int_value(cfg_file, "PUERTO_ESCUCHA");
-    cfg->TAMANIO_MEMORIA = config_get_int_value(cfg_file, "TAMANIO_MEMORIA");
-    cfg->TAMANIO_PAGINA = config_get_int_value(cfg_file, "TAMANIO_PAGINA");
+    cfg->TAM_MEMORIA = config_get_int_value(cfg_file, "TAMANIO_MEMORIA");
+    cfg->TAM_PAGINA = config_get_int_value(cfg_file, "TAMANIO_PAGINA");
     cfg->ENTRADAS_POR_TABLA = config_get_int_value(cfg_file, "ENTRADAS_POR_TABLA");
     cfg->RETARDO_MEMORIA = config_get_int_value(cfg_file, "RETARDO_MEMORIA");
     cfg->ALGORITMO_REEMPLAZO = strdup(config_get_string_value(cfg_file, "ALGORITMO_REEMPLAZO"));
@@ -79,6 +79,27 @@ static bool crear_archivo_swap(char *path, uint32_t tamanio)
     close(fd_swap);
 
     return true;
+}
+
+uint8_t cargar_memoria()
+{
+    memoria_principal = malloc(cfg->TAM_MEMORIA);
+    if (memoria_principal == NULL)
+    {
+        log_error(logger, "No se pudo pedir memoria para memoria_principal");
+        return 0;
+    }
+    // void *memset(void *str, int c, size_t n)
+    // str ---> donde se va a llenar
+    // c ---> el llenado de memoria principal se hace usando la conversión unsigned char del valor ingresado
+    // n ---> Es el número de bytes para setear a memoria principal, por así decirlo el tam_maximo.
+    // https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
+    // Inicializo la memoria vacia (todo en 0)
+    memset(memoria_principal, 0, cfg->TAMANIO_MEMORIA);
+    memoria_disponible = cfg->TAMANIO_MEMORIA; // int
+                                               // pendiente más logica
+
+    return 0;
 }
 
 void cerrar_programa()
