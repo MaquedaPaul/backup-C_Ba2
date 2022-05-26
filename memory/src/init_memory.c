@@ -99,7 +99,7 @@ uint8_t cargar_memoria()
     memoria_disponible = cfg->TAMANIO_MEMORIA; // int
                                                // pendiente más logica
 
-    return 0;
+    return 1;
 }
 
 void cerrar_programa()
