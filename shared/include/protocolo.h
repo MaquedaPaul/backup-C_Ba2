@@ -27,14 +27,6 @@ typedef enum
         ACCESS_TO_USER_SPACE_WRITE = 12
 } op_code;
 
-// bool send_aprobar_operativos(int fd, uint8_t nota1, uint8_t nota2);
-// bool recv_aprobar_operativos(int fd, uint8_t *nota1, uint8_t *nota2);
-
-// bool send_mirar_netflix(int fd, char *peli, uint8_t cant_pochoclos);
-// bool recv_mirar_netflix(int fd, char **peli, uint8_t *cant_pochoclos);
-
-// bool send_debug(int fd);
-
 bool send_unit32_t(int fd, uint32_t cantidad, op_code codigo_operacion);
 bool recv_uint32_t(int fd, uint32_t *cantidad);
 
