@@ -1,3 +1,4 @@
+
 uint8_t cargar_configuracion(char *path)
 {
     t_config *cfg_file = config_create(path);
@@ -44,4 +45,27 @@ uint8_t cargar_configuracion(char *path)
     config_destroy(cfg_file);
 
     return 1;
+}
+
+static bool crear_archivo_swap(char *path, uint32_t tamanio)
+{
+    log_info(logger, "Creando SWAP en %s", path);
+    // int open(const char *pathname, int flags, mode_t mode);
+    int fd_swap = open(path, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+    // O_RDWR: Archivo en modo escritura lectura
+    // O_CREAT: Si no existe, crearlo en el path
+    // S_IRUSR: El usuario cuenta con permisos para leer
+    // S_IWUSR: El usuario cuenta con permisos para escribir
+
+    if (fd_swap == -1)
+    {
+        log_error(logger, "No se pudo crear el area de SWAP. (errno %i)", errno);
+        return false;
+    }
+
+    // Lógica del seteo en swap
+
+    close(fd_swap);
+
+    return true;
 }
