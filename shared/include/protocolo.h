@@ -10,15 +10,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-// typedef enum
-// {
-//     APROBAR_OPERATIVOS,
-//     MIRAR_NETFLIX,
-//     DEBUG = 69,
-// } op_code;
-
-///
-
 typedef enum
 {
         NO_OP = 1,
