@@ -1,4 +1,17 @@
 
+// Declaro memoria y swap
+
+void *swap;
+void *memoria_principal;
+
+uint8_t init()
+{
+    cfg = initialize_cfg();
+    logger = log_create("memory.log", MODULENAME, false, LOG_LEVEL_INFO);
+    // Podría haber un semáforo para sincronizar....
+    return 1;
+}
+
 uint8_t cargar_configuracion(char *path)
 {
     t_config *cfg_file = config_create(path);
@@ -27,7 +40,7 @@ uint8_t cargar_configuracion(char *path)
         config_destroy(cfg_file);
         return 0;
     }
-    cfg->PUERTO = config_get_int_value(cfg_file, "PUERTO");
+    cfg->PUERTO_ESCUCHA = config_get_int_value(cfg_file, "PUERTO_ESCUCHA");
     cfg->TAMANIO_MEMORIA = config_get_int_value(cfg_file, "TAMANIO_MEMORIA");
     cfg->TAMANIO_PAGINA = config_get_int_value(cfg_file, "TAMANIO_PAGINA");
     cfg->ENTRADAS_POR_TABLA = config_get_int_value(cfg_file, "ENTRADAS_POR_TABLA");
@@ -71,7 +84,7 @@ static bool crear_archivo_swap(char *path, uint32_t tamanio)
 void cerrar_programa()
 {
     log_info(logger, "Finalizando el programa (...)");
-    free(cfg->PUERTO);
+    free(cfg->PUERTO_ESCUCHA);
     free(cfg->TAMANIO_MEMORIA);
     free(cfg->TAMANIO_PAGINA);
     free(cfg->ENTRADAS_POR_TABLA);
