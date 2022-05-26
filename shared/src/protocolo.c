@@ -1,17 +1,5 @@
 #include "../include/protocolo.h"
 
-/*  @NAME: serializar_uint8_t
-    @DESC: Me va a servir para serializar NO_OP, I/O , READ. Es una funcion aux para el send
-    @PARAMETROS:
-                 - cantidad: es ul uint8_t que queremos serializar
-                 - codigoOperacion: es el codigo de operacion que corresponde. Se lo agregamos ya que con una funcion
-                   serializamos 3 codigos(serian NO_OP, IO , READ)
-
-    @RETORNO: un stream
-
-    @EJEMPLOS: serializar_uint8_t(5,NO_OP);
- */
-
 static void *serializar_uint32_t(uint32_t cantidad, op_code codigoOperacion)
 {
 
@@ -59,11 +47,6 @@ bool recv_uint32_t(int fd, uint32_t *cantidad)
     free(stream);
     return true;
 }
-
-/* serializar_dos_uint8_t: nos va a servir para serializar NO_OP , I/O , READ
-    Debido a que los 3 reciben los mismos parametros se serializan igual
-    le pongo el codigo de operacion como parametro de la funcion para cuando lo enviemos
-*/
 
 static void *serializar_dos_uint32_t(uint32_t param1, uint32_t param2, op_code codigo_operacion)
 {
