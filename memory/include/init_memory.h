@@ -1,6 +1,6 @@
 #ifndef MEMORY_INIT_H
 #define MEMORY_INIT_H
-
+#define MODULENAME "MEMORY"
 #include <fcntl.h> //Para crear y abrir archivos "open"
 t_log *logger;
 t_config_memory *cfg;
