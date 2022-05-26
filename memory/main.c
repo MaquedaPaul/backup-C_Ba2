@@ -1,5 +1,10 @@
 
 #include "include/main.h"
+extern t_config_memory *cfg;
+extern t_log *logger;
+extern void *memoria_principal;
+extern void *swap;
+int memory_server;
 
 int main()
 {
@@ -10,7 +15,7 @@ int main()
     }
 
     // ****** CREACION DEL SERVIDOR ******
-    char *puerto = string_itoa(cfg->PUERTO);
+    char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
     memory_server = iniciar_servidor(logger, SERVERNAME, "0.0.0.0", puerto);
     free(puerto);
 
