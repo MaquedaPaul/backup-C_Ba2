@@ -34,8 +34,6 @@ uint8_t cargar_configuracion(char *path)
     cfg->RETARDO_MEMORIA = config_get_int_value(cfg_file, "RETARDO_MEMORIA");
     cfg->ALGORITMO_REEMPLAZO = strdup(config_get_string_value(cfg_file, "ALGORITMO_REEMPLAZO"));
 
-    cfg->LRU = strcmp(cfg->ALGORITMO_REEMPLAZO, "LRU") == 0;
-
     cfg->MARCOS_POR_PROCESO = config_get_int_value(cfg_file, "MARCOS_POR_PROCESO");
     cfg->RETARDO_SWAP = config_get_int_value(cfg_file, "RETARDO_SWAP");
     cfg->PATH_SWAP = strdup(config_get_string_value(cfg_file, "PATH_SWAP"));
@@ -68,4 +66,20 @@ static bool crear_archivo_swap(char *path, uint32_t tamanio)
     close(fd_swap);
 
     return true;
+}
+
+void cerrar_programa()
+{
+    log_info(logger, "Finalizando el programa (...)");
+    free(cfg->PUERTO);
+    free(cfg->TAMANIO_MEMORIA);
+    free(cfg->TAMANIO_PAGINA);
+    free(cfg->ENTRADAS_POR_TABLA);
+    free(cfg->RETARDO_MEMORIA);
+    free(cfg->ALGORITMO_REEMPLAZO);
+    free(cfg->MARCOS_POR_PROCESO);
+    free(cfg->RETARDO_SWAP);
+    free(cfg->ALGORITMO_REEMPLAZO);
+    free(cfg->PATH_SWAP);
+    free(cfg);
 }
