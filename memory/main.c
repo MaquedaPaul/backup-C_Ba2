@@ -20,8 +20,7 @@ int main()
     free(puerto);
 
     //****** ESCUCHANDO ******
-    while (server_escuchar(SERVERNAME, memory_server))
-        ;
+    while (server_escuchar(SERVERNAME, memory_server));
 
     liberar_conexion(&memory_server);
     cerrar_programa();
