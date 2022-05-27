@@ -4,7 +4,8 @@
         "sockets.h": "c",
         "protocolo.h": "c",
         "commoncontrols.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "fcntl.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
