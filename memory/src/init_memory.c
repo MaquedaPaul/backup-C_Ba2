@@ -6,9 +6,10 @@ void *memoria_principal;
 
 uint8_t init()
 {
-    cfg = initialize_cfg();
+    cfg = initialize_cfg(); // Inicializo la estructura que va a contener los datos del archivo memory.config
     logger = log_create("memory.log", MODULENAME, false, LOG_LEVEL_INFO);
     // Podría haber un semáforo para sincronizar....
+    log_info(logger, "LOG 2");
     return 1;
 }
 
@@ -95,9 +96,8 @@ uint8_t cargar_memoria()
     // n ---> Es el número de bytes para setear a memoria principal, por así decirlo el tam_maximo.
     // https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
     // Inicializo la memoria vacia (todo en 0)
-    memset(memoria_principal, 0, cfg->TAMANIO_MEMORIA);
-    memoria_disponible = cfg->TAMANIO_MEMORIA; // int
-                                               // pendiente más logica
+    memset(memoria_principal, 0, cfg->TAM_MEMORIA);
+    // pendiente más logica
 
     return 1;
 }
@@ -106,8 +106,8 @@ void cerrar_programa()
 {
     log_info(logger, "Finalizando el programa (...)");
     free(cfg->PUERTO_ESCUCHA);
-    free(cfg->TAMANIO_MEMORIA);
-    free(cfg->TAMANIO_PAGINA);
+    free(cfg->TAM_MEMORIA);
+    free(cfg->TAM_PAGINA);
     free(cfg->ENTRADAS_POR_TABLA);
     free(cfg->RETARDO_MEMORIA);
     free(cfg->ALGORITMO_REEMPLAZO);
@@ -116,4 +116,5 @@ void cerrar_programa()
     free(cfg->ALGORITMO_REEMPLAZO);
     free(cfg->PATH_SWAP);
     free(cfg);
+    free(logger);
 }

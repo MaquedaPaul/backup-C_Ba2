@@ -1,4 +1,4 @@
-#include "include/comunicacion.h"
+#include "../include/comunicacion.h"
 
 enum
 {
@@ -61,7 +61,7 @@ static void procesar_conexion(void *void_args)
          */
         if (recv(cliente_socket, &cop, sizeof(op_code), 0) != sizeof(op_code))
         {
-            log_info(logger, "Desconectando el cliente"));
+            log_info(logger, "Desconectando el cliente");
             return;
         }
 
@@ -172,7 +172,7 @@ int server_escuchar(char *server_name, int server_socket)
     if (cliente_socket != -1)
     {
         pthread_t hilo;
-        t_procesar_conexion *args = malloc(sizeof(t_procesar_conexion_args));
+        t_procesar_conexion *args = malloc(sizeof(t_procesar_conexion));
         args->fd = cliente_socket;
         args->server_name = server_name;
         pthread_create(&hilo, NULL, (void *)procesar_conexion, (void *)args);
