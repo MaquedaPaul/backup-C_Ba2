@@ -5,7 +5,8 @@
         "protocolo.h": "c",
         "commoncontrols.h": "c",
         "main.h": "c",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "comunicacion.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
