@@ -8,7 +8,7 @@
 #include "../include/init_memory.h" //Para tener logger y config
 #include <stdint.h>                 //Distintos tipos de INT
 #include <stdio.h>                  //Para incluir NULL
-
+#include <pthread.h>                //Para hilos
 typedef struct
 {
     int fd;

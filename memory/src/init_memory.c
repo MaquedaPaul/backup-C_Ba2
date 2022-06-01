@@ -6,15 +6,17 @@ void *memoria_principal;
 
 uint8_t init()
 {
+
     cfg = initialize_cfg(); // Inicializo la estructura que va a contener los datos del archivo memory.config
     logger = log_create("memory.log", MODULENAME, false, LOG_LEVEL_INFO);
     // Podría haber un semáforo para sincronizar....
-    log_info(logger, "LOG 2");
+
     return 1;
 }
 
 uint8_t cargar_configuracion(char *path)
 {
+
     t_config *cfg_file = config_create(path);
 
     if (cfg_file == NULL)
@@ -41,9 +43,11 @@ uint8_t cargar_configuracion(char *path)
         config_destroy(cfg_file);
         return 0;
     }
+
     cfg->PUERTO_ESCUCHA = config_get_int_value(cfg_file, "PUERTO_ESCUCHA");
-    cfg->TAM_MEMORIA = config_get_int_value(cfg_file, "TAMANIO_MEMORIA");
-    cfg->TAM_PAGINA = config_get_int_value(cfg_file, "TAMANIO_PAGINA");
+
+    cfg->TAM_MEMORIA = config_get_int_value(cfg_file, "TAM_MEMORIA");
+    cfg->TAM_PAGINA = config_get_int_value(cfg_file, "TAM_PAGINA");
     cfg->ENTRADAS_POR_TABLA = config_get_int_value(cfg_file, "ENTRADAS_POR_TABLA");
     cfg->RETARDO_MEMORIA = config_get_int_value(cfg_file, "RETARDO_MEMORIA");
     cfg->ALGORITMO_REEMPLAZO = strdup(config_get_string_value(cfg_file, "ALGORITMO_REEMPLAZO"));
@@ -105,6 +109,8 @@ uint8_t cargar_memoria()
 void cerrar_programa()
 {
     log_info(logger, "Finalizando el programa (...)");
+
+    /*
     free(cfg->PUERTO_ESCUCHA);
     free(cfg->TAM_MEMORIA);
     free(cfg->TAM_PAGINA);
@@ -117,4 +123,5 @@ void cerrar_programa()
     free(cfg->PATH_SWAP);
     free(cfg);
     free(logger);
+    */
 }

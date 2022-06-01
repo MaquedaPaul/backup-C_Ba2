@@ -2,6 +2,7 @@
 
 t_log *logger;
 int fd_kernel;
+int pid_actual = 0;
 
 void sighandler(int s)
 {
@@ -24,7 +25,8 @@ int main()
     log_info(logger, "Puerto Cargado %s", puerto);
 
     fd_kernel = iniciar_servidor(logger, "KERNEL", ip, puerto);
-    while (server_escuchar(logger, "KERNEL", fd_kernel));
+    while (server_escuchar(logger, "KERNEL", fd_kernel))
+        ;
 
     cerrar_programa(logger);
 

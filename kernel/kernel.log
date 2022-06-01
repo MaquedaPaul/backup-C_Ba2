@@ -1,16 +1,0 @@
-[INFO] 18:49:18:514 KERNEL/(9829:9829): IP Cargada 127.0.0.1
-[INFO] 18:49:18:516 KERNEL/(9829:9829): Puerto Cargado 8000
-[INFO] 18:49:18:517 KERNEL/(9829:9829): Escuchando en 127.0.0.1:8000 (KERNEL)
-
-[INFO] 18:49:25:373 KERNEL/(9829:9829): Cliente conectado (a KERNEL)
-
-[INFO] 18:49:30:957 KERNEL/(9829:9829): Cliente conectado (a KERNEL)
-
-[INFO] 18:49:33:338 KERNEL/(9829:9831): Tengo que hacer 5 operaciones de NO_OP 
-[INFO] 18:49:34:816 KERNEL/(9829:9831): Me debo bloquear por 3000  milisegundos
-[INFO] 18:49:37:082 KERNEL/(9829:9831): Debo escribir en memoria el valor 42 en el espacio 4
-[INFO] 18:49:38:691 KERNEL/(9829:9831): DISCONNECT!
-[INFO] 18:49:41:418 KERNEL/(9829:9835): Tengo que hacer 5 operaciones de NO_OP 
-[INFO] 18:49:42:102 KERNEL/(9829:9835): Me debo bloquear por 3000  milisegundos
-[INFO] 18:49:42:634 KERNEL/(9829:9835): Debo escribir en memoria el valor 42 en el espacio 4
-[INFO] 18:49:43:220 KERNEL/(9829:9835): DISCONNECT!
