@@ -27,87 +27,75 @@ static void procesar_conexion(void *void_args)
 
         switch (cop)
         {
-        // case DEBUG:
-        //     log_info(logger, "debug");
-        //     break;
-
-        // case MIRAR_NETFLIX:
-        // {
-        //     char *peli;
-        //     uint8_t pochoclos;
-
-        //     if (!recv_mirar_netflix(cliente_socket, &peli, &pochoclos))
-        //     {
-        //         log_error(logger, "Fallo recibiendo MIRAR_NETFLIX");
-        //         break;
-        //     }
-
-        //     log_info(logger, "Mirando %s con %" PRIu8 " pochoclos.", peli, pochoclos);
-
-        //     free(peli);
-        //     break;
-        // }
         case NO_OP:
-           { 
-               uint32_t cantidad;
+        {
+            uint32_t cantidad;
 
-            if(!recv_uint32_t(cliente_socket, &cantidad)){
+            if (!recv_uint32_t(cliente_socket, &cantidad))
+            {
                 log_error(logger, "Fallo recibiendo NO_OP");
                 break;
             }
 
-            log_info(logger,"Tengo que hacer %u operaciones de NO_OP ", cantidad);
+            log_info(logger, "Tengo que hacer %u operaciones de NO_OP ", cantidad);
             break;
-           }
+        }
 
         case IO:
         {
             uint32_t tiempo;
-            if(!recv_uint32_t(cliente_socket,&tiempo)){
-                log_error(logger,"Fallo recibiendo IO");
+            if (!recv_uint32_t(cliente_socket, &tiempo))
+            {
+                log_error(logger, "Fallo recibiendo IO");
                 break;
             }
 
-            log_info(logger,"Me debo bloquear por %u  milisegundos",tiempo);
+            log_info(logger, "Me debo bloquear por %u  milisegundos", tiempo);
             break;
         }
-        
+
         case READ:
-            {
-          
+        {
+
             uint32_t direccion_logica;
-            if(!recv_uint32_t(cliente_socket,&direccion_logica)){
-                log_error(logger,"Fallo recibiendo READ");
+            if (!recv_uint32_t(cliente_socket, &direccion_logica))
+            {
+                log_error(logger, "Fallo recibiendo READ");
                 break;
             }
-            log_info(logger,"Debo leer el valor de memoria correspondiente a la dir %u y luego imprimirlo por pantalla",direccion_logica);
+            log_info(logger, "Debo leer el valor de memoria correspondiente a la dir %u y luego imprimirlo por pantalla", direccion_logica);
             break;
-            }
-       
+        }
+
         case WRITE:
-           { uint32_t direccion_logica;
+        {
+            uint32_t direccion_logica;
             uint32_t valor;
-            if(!recv_dos_uint32_t(cliente_socket,&direccion_logica,&valor)){
-                log_error(logger,"Fallo recibiendo WRITE");
+            if (!recv_dos_uint32_t(cliente_socket, &direccion_logica, &valor))
+            {
+                log_error(logger, "Fallo recibiendo WRITE");
                 break;
             }
-            log_info(logger,"Debo escribir en memoria el valor %u en el espacio %u" , valor,direccion_logica);
-            break;}
-        
+            log_info(logger, "Debo escribir en memoria el valor %u en el espacio %u", valor, direccion_logica);
+            break;
+        }
+
         case COPY:
-            {uint32_t direccion_logica_destino;
+        {
+            uint32_t direccion_logica_destino;
             uint32_t direccion_logica_origen;
-            if(!recv_dos_uint32_t(cliente_socket, &direccion_logica_destino, &direccion_logica_origen)){
-                log_error(logger,"Fallo recibiendo COPY");
+            if (!recv_dos_uint32_t(cliente_socket, &direccion_logica_destino, &direccion_logica_origen))
+            {
+                log_error(logger, "Fallo recibiendo COPY");
                 break;
             }
-            log_info(logger,"Debo escribir en %u el valor contenido dentro de %u",direccion_logica_destino, direccion_logica_origen);
-            break;}
+            log_info(logger, "Debo escribir en %u el valor contenido dentro de %u", direccion_logica_destino, direccion_logica_origen);
+            break;
+        }
 
         case EXIT:
-            log_info(logger,"EXIT");
+            log_info(logger, "EXIT");
             break;
-
 
         // Errores
         case -1:
