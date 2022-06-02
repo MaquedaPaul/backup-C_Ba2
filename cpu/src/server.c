@@ -30,7 +30,13 @@ static void procesar_conexion(void *void_args)
                 log_error(logger, "Fallo recibiendo HANDSHAKE");
                 break;
             }
-            printf("Handshake recibido, %i", apreton);
+            printf("Handshake recibido, %i \n", apreton);
+
+            if (!sendHandShake(cliente_socket, 3))
+            {
+                log_info(logger, "No se pudo enviar el mensaje");
+                return;
+            }
         }
 
             /*
@@ -134,6 +140,7 @@ int server_escuchar_cpu(t_log *logger, char *server_name, int server_socket)
         pthread_detach(hilo);
         return 1;
     }
+
     return 0;
 }
 /*
