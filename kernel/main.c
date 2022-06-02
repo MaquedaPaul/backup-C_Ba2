@@ -1,9 +1,5 @@
 #include "include/main.h"
 
-t_log *logger;
-int fd_kernel;
-int pid_actual = 0;
-
 void sighandler(int s)
 {
     cerrar_programa(logger);
@@ -21,26 +17,23 @@ int main()
     if (!init() || !cargar_configuracion("kernel.config"))
     // cada función va a hacer su operación, si las tres fallan, se cierra la app
     {
-        cerrar_programa();
+        cerrar_programa(logger2);
         return EXIT_FAILURE;
     }
 
-    char *ip;
-    char *puerto;
-
-    signal(SIGINT, sighandler); // Para poder cerrar correctamente el programa apretando CTRL + C
+    // signal(SIGINT, sighandler); // Para poder cerrar correctamente el programa apretando CTRL + C
     logger = log_create("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
 
-    t_config *configKernelAsServer = iniciar_config("./server.config");
-    ip = config_get_string_value(configKernelAsServer, "IP_KERNEL");
-    log_info(logger, "IP Cargada %s", ip);
-    puerto = config_get_string_value(configKernelAsServer, "PUERTO_KERNEL");
-    log_info(logger, "Puerto Cargado %s", puerto);
+    // ****** CREACION DEL SERVIDOR ******
 
-    fd_kernel = iniciar_servidor(logger, "KERNEL", ip, puerto);
-    while (server_escuchar(logger, "KERNEL", fd_kernel))
+    char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
+    log_info(logger, "Cargado puerto %s", puerto);
+    kernel_server = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
+    log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
+
+    while (server_escuchar(logger, SERVERNAME, kernel_server))
         ;
-
+    liberar_conexion(kernel_server);
     cerrar_programa(logger);
 
     return 0;

@@ -20,7 +20,8 @@ int main()
 
     // while(feof(flujo) == 0){ //feof me devuelve !=0 si el flujo no esta vacio
     // }
-
+    uint32_t handshake = 5;
+    sendHandShake(fd_kernel, handshake);
     int a;
 
     scanf("%d", &a);

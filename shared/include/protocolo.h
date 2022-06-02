@@ -12,20 +12,26 @@
 
 typedef enum
 {
+    HANDSHAKE = 0,
+    INICIALIZAR_PROCESO = 1,
+    // Memoria espera mensajes de CPU Y KERNEL:
+    START_PROCESS = 2,
+    SUSPEND_PROCESS,
+    END_PROCESS,
+    ACCESS_TO_TABLE_PAGES,
+    ACCESS_TO_USER_SPACE_READ,
+    ACCESS_TO_USER_SPACE_WRITE = 7
+} op_code;
+
+typedef enum
+{
     NO_OP = 1,
     IO,
     READ,
     COPY,
     WRITE,
-    EXIT = 6,
-    // Memoria espera mensajes de CPU Y KERNEL:
-    START_PROCESS = 7,
-    SUSPEND_PROCESS,
-    END_PROCESS,
-    ACCESS_TO_TABLE_PAGES,
-    ACCESS_TO_USER_SPACE_READ,
-    ACCESS_TO_USER_SPACE_WRITE = 12
-} op_code;
+    EXIT = 6
+} cod_instruccion;
 
 static void *serializar_uint32_t(uint32_t cantidad, op_code codigoOperacion);
 /*  @NAME: serializar_uint32_t
@@ -39,6 +45,11 @@ static void *serializar_uint32_t(uint32_t cantidad, op_code codigoOperacion);
 
     @EJEMPLOS: serializar_uint32_t(5,NO_OP);
     */
+
+bool sendHandShake(int fd, uint32_t cantidad);
+bool recvHandShake(int fd, uint32_t *cantidad);
+static void *serializar_handshake(uint32_t unEntero);
+static void deserializar_handshake(void *stream, uint32_t *unEntero);
 
 bool send_unit32_t(int fd, uint32_t cantidad, op_code codigo_operacion);
 bool recv_uint32_t(int fd, uint32_t *cantidad);
