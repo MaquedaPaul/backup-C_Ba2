@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "init_memory.h": "c",
-        "estructuras.h": "c"
+        "estructuras.h": "c",
+        "stdio.h": "c",
+        "init_kernel.h": "c",
+        "sockets.h": "c",
+        "string.h": "c",
+        "protocolo.h": "c"
     }
 }
