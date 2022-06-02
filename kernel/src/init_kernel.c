@@ -1,4 +1,4 @@
-#include "../include/init.h"
+#include "../include/init_kernel.h"
 
 uint8_t init()
 {
@@ -20,6 +20,7 @@ uint8_t cargar_configuracion(char *path)
         log_error(logger, "No se encontro memory.config");
         return 0;
     }
+
     char *properties[] = {
         "IP_MEMORIA",
         "PUERTO_MEMORIA",
@@ -43,6 +44,8 @@ uint8_t cargar_configuracion(char *path)
     }
 
     cfg->IP_MEMORIA = config_get_int_value(cfg_file, "IP_MEMORIA");
+    // PENDIENTE
+    // log_info(logger, "IP Cargada %s", ip);
     cfg->PUERTO_ESCUCHA = config_get_int_value(cfg_file, "PUERTO_ESCUCHA");
     cfg->IP_CPU = config_get_int_value(cfg_file, "IP_CPU");
     cfg->PUERTO_CPU_DISPATCH = config_get_int_value(cfg_file, "PUERTO_CPU_DISPATCH");
@@ -59,7 +62,15 @@ uint8_t cargar_configuracion(char *path)
 
     return 1;
 }
-
+/*
+void inicializar_servidor(int fd)
+{
+    char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
+    log_info(logger, "Cargado puerto %s", puerto);
+    *fd = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
+    log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
+}
+*/
 void cerrar_programa(t_log *logger)
 {
     log_destroy(logger);
