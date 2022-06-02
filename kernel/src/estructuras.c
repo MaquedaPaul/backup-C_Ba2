@@ -10,15 +10,16 @@ static t_PCB *iniciar_pcb(uint8_t unPID, t_list unasInstrucciones, uint64_t proc
     pcb->instrucciones = unasInstrucciones;
     pcb->program_counter = pc;
     pcb->estimacion_rafaga = estimacion;
+    // falta direccion tabla de paginas.
     return pcb;
 }
 
-static t_instruccion *iniciar_instruccion(char *instruccion, uint32_t campo1 uint32_t campo2)
+static t_instruccion *iniciar_instruccion(char *unaInstruccion, uint32_t unCampo1, uint32_t unCampo2)
 {
     t_instruccion *instruccion = malloc(sizeof(t_instruccion));
-    instruccion->nombre = instruccion;
-    instruccion->campo1 = campo1;
-    instruccion->campo2 = campo2;
+    instruccion->nombre = unaInstruccion;
+    instruccion->campo1 = unCampo1;
+    instruccion->campo2 = unCampo2;
     return instruccion;
 }
 static t_list *iniciar_lista_instrucciones()
