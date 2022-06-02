@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include <inttypes.h>
 #include <commons/log.h>
+#include <stdint.h> //Distintos tipos de INT
 
 #include "../../shared/include/sockets.h"
 #include "../../shared/include/protocolo.h"

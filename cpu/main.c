@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "include/main.h"
 
 //Conexiones
@@ -112,4 +113,11 @@ while(TRUE){
     }
 
 
+=======
+#include "include/main.h"
+
+int main()
+{
+    return 0;
+>>>>>>> 4c0860d7e02a71df3a3f902599ec0cf3b7d1104a
 }

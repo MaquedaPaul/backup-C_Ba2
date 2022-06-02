@@ -27,27 +27,90 @@ static void procesar_conexion(void *void_args)
 
         switch (cop)
         {
-        case DEBUG:
-            log_info(logger, "debug");
-            break;
 
-        case MIRAR_NETFLIX:
+        case HANDSHAKE:
         {
-            char *peli;
-            uint8_t pochoclos;
+            uint32_t apreton;
 
-            if (!recv_mirar_netflix(cliente_socket, &peli, &pochoclos))
+            if (!recvHandShake(cliente_socket, &apreton))
             {
-                log_error(logger, "Fallo recibiendo MIRAR_NETFLIX");
+                log_error(logger, "Fallo recibiendo HANDSHAKE");
                 break;
             }
-
-            log_info(logger, "Mirando %s con %" PRIu8 " pochoclos.", peli, pochoclos);
-
-            free(peli);
-            break;
+            printf("Handshake recibido, %i", apreton);
         }
 
+            /*
+                    case NO_OP:
+                    {
+                        uint32_t cantidad;
+
+                        if (!recv_uint32_t(cliente_socket, &cantidad))
+                        {
+                            log_error(logger, "Fallo recibiendo NO_OP");
+                            break;
+                        }
+
+                        log_info(logger, "Tengo que hacer %u operaciones de NO_OP ", cantidad);
+                        break;
+                    }
+
+                    case IO:
+                    {
+                        uint32_t tiempo;
+                        if (!recv_uint32_t(cliente_socket, &tiempo))
+                        {
+                            log_error(logger, "Fallo recibiendo IO");
+                            break;
+                        }
+
+                        log_info(logger, "Me debo bloquear por %u  milisegundos", tiempo);
+                        break;
+                    }
+
+                    case READ:
+                    {
+
+                        uint32_t direccion_logica;
+                        if (!recv_uint32_t(cliente_socket, &direccion_logica))
+                        {
+                            log_error(logger, "Fallo recibiendo READ");
+                            break;
+                        }
+                        log_info(logger, "Debo leer el valor de memoria correspondiente a la dir %u y luego imprimirlo por pantalla", direccion_logica);
+                        break;
+                    }
+
+                    case WRITE:
+                    {
+                        uint32_t direccion_logica;
+                        uint32_t valor;
+                        if (!recv_dos_uint32_t(cliente_socket, &direccion_logica, &valor))
+                        {
+                            log_error(logger, "Fallo recibiendo WRITE");
+                            break;
+                        }
+                        log_info(logger, "Debo escribir en memoria el valor %u en el espacio %u", valor, direccion_logica);
+                        break;
+                    }
+
+                    case COPY:
+                    {
+                        uint32_t direccion_logica_destino;
+                        uint32_t direccion_logica_origen;
+                        if (!recv_dos_uint32_t(cliente_socket, &direccion_logica_destino, &direccion_logica_origen))
+                        {
+                            log_error(logger, "Fallo recibiendo COPY");
+                            break;
+                        }
+                        log_info(logger, "Debo escribir en %u el valor contenido dentro de %u", direccion_logica_destino, direccion_logica_origen);
+                        break;
+                    }
+
+                    case EXIT:
+                        log_info(logger, "EXIT");
+                        break;
+            */
         // Errores
         case -1:
             log_error(logger, "Cliente desconectado de %s...", server_name);
@@ -80,3 +143,32 @@ int server_escuchar(t_log *logger, char *server_name, int server_socket)
     }
     return 0;
 }
+/*
+int generar_conexiones(t_log *logger, char *server_name, int server_socket){
+
+
+}
+*/
+/*
+bool generar_conexiones(t_log *logger, int *fd_kernel)
+{
+    // No hardcodear, levantar de config
+    char *ip_kernel;
+    char *puerto_kernel;
+
+    t_config *configKernelConnection = iniciar_config("./kernel.config");
+    ip_kernel = config_get_string_value(configKernelConnection, "IP_KERNEL");
+    log_info(logger, "IP Cargada %s", ip_kernel);
+    puerto_kernel = config_get_string_value(configKernelConnection, "PUERTO_KERNEL");
+    log_info(logger, "Puerto Cargado %s", puerto_kernel);
+
+    // char *port_kernel = "6969";
+    //  char *port_mod3 = "4200";
+    // char *ip_kernel = "0.0.0.0";
+    //  char *ip_mod3 = "0.0.0.0";
+
+    *fd_kernel = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel); // es el que acopla, pero antes te tienen que estar esperando
+
+    return *fd_kernel != 0; //&& *fd_cpu != 0;
+}
+*/
