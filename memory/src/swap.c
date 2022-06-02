@@ -5,20 +5,20 @@ Los archivos de SWAP se van a ir generando a medida que se carguen los diferente
 
 void manejarPeticionLecturaEnSWAP(int peticion)
 {
-    retardo(config);
+    // retardo(config);
 }
 void manejarPeticionEscrituraEnSWAP()
 {
-    retardo(config);
+    // retardo(config);
 }
 void generarArchivoSWAP(int PID)
 {
-    crearArchivo("PID.swap");
+    // crearArchivo("PID.swap");
 }
 
 void eliminarArchivoSWAP(int PID)
 {
-    eliminarArchivo("PID.swap");
+    // eliminarArchivo("PID.swap");
 }
 
 /*

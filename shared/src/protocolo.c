@@ -103,3 +103,25 @@ bool send_exit(int fd)
 }
 
 // NO es necesario hacer un recv_exit pq no recibe nada, el op_code ya lo tengo
+
+static op_code recibir_cop(int fd)
+{
+    op_code cop;
+    if (recv(fd, &cop, sizeof(op_code), 0) != 0)
+        return cop;
+    else
+    {
+        close(fd);
+        return -1;
+    }
+}
+
+bool send_op_code(int fd, int unOp_code)
+{
+    op_code cop = unOp_code;
+    if (send(fd, &cop, sizeof(op_code), 0) != sizeof(op_code))
+    {
+        return false;
+    }
+    return true;
+}

@@ -1,11 +1,6 @@
 {
     "files.associations": {
-        "unistd.h": "c",
-        "sockets.h": "c",
-        "protocolo.h": "c",
-        "commoncontrols.h": "c",
-        "main.h": "c",
-        "fcntl.h": "c"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
+        "init_memory.h": "c",
+        "estructuras.h": "c"
+    }
 }

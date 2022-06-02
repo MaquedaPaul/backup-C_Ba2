@@ -6,7 +6,7 @@ La asignación de memoria de este trabajo práctico utilizará un esquema de pag
 
 // se me ocurre que deberían ser dos listas enlazadas
 int paginacionNivelUno(int cantidadEntradas, int referenciasASegundoNivel);
-int paginacionNivelDos(int cantidadEntradas, int asignacionDeMarcosFija, int scopeDeReemplazoLocal, algoritmoReemplazo);
+int paginacionNivelDos(int cantidadEntradas, int asignacionDeMarcosFija, int scopeDeReemplazoLocal, int algoritmoReemplazo);
 
 /*
 Además debe implementar memoria virtual, más específicamente, paginación bajo demanda. En este contexto, se definirá una asignación de cantidad de marcos fija definida por archivo de configuración y un scope de reemplazo local. El algoritmo de reemplazo será definido por archivo de configuración, pudiendo ser Clock o Clock Modificado.

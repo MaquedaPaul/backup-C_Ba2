@@ -1,31 +1,30 @@
-#include "include/comunicacion.h"
+#include "../include/comunicacion.h"
 
-typedef struct
+enum
 {
-    int fd;
-    char *server_name;
-} t_procesar_conexion;
+    PRIMER_NIVEL,
+    SEGUNDO_NIVEL
+};
 
 int iniciarProceso(int proceso)
 {
     // crear estructuras administrativas
     // obtenerPrimerNivelProceso(); ---> probablemente se consiga cuando se
     // creen las estructuras administrativas
-    int primerNivelProceso = obtenerPrimerNivelProceso();
-    return primerNivelProceso;
+    // int primerNivelProceso = obtenerPrimerNivelProceso();
+    // return primerNivelProceso;
+    return 0;
 };
 
-void suspenderProceso(int proceso)
-{
-    escribirEnSWAP(proceso); // solamente informacion necesaria
-    liberarMemoria(proceso);
+void suspenderProceso(int proceso){
+    // escribirEnSWAP(proceso); // solamente informacion necesaria
+    // liberarMemoria(proceso);
 };
 
-void finalizarProceso(int proceso)
-{
-    liberarMemoria(proceso);
-    eliminarSWAP(proceso); // no se eliminan las tablas de páginas del proceso,
-    // o no apriori
+void finalizarProceso(int proceso){
+    // liberarMemoria(proceso);
+    // eliminarSWAP(proceso); // no se eliminan las tablas de páginas del proceso,
+    //  o no apriori
 };
 
 void accesoATablaDePaginas()
@@ -62,7 +61,7 @@ static void procesar_conexion(void *void_args)
          */
         if (recv(cliente_socket, &cop, sizeof(op_code), 0) != sizeof(op_code))
         {
-            log_info(logger, "Desconectando el cliente"));
+            log_info(logger, "Desconectando el cliente");
             return;
         }
 
@@ -86,9 +85,9 @@ static void procesar_conexion(void *void_args)
           */
             // Una vez que se inicializa mp y tabla de paginas, guardo la variable con la info
             // de las tablas de paginas y la utilizo en la función:
-            colocar_pagina_en_mp();
+            //*colocar_pagina_en_mp();
             // Un archivo por proceso, que representarán el espacio de SWAP de cada uno.
-            crear_swap();
+            //*crear_swap();
             // Es responsabilidad de la memoria conocer el proceso que se está creando?
             // Cuando finalizo un proceso, qué necesito que me pasen? la página y desplazamiento?
             break;
@@ -97,16 +96,16 @@ static void procesar_conexion(void *void_args)
         case SUSPEND_PROCESS:
         {
             int proceso;
-            escribirEnSWAP(proceso);
-            liberarMemoria(proceso);
+            // escribirEnSWAP(proceso);
+            // liberarMemoria(proceso);
             break;
         }
 
         case END_PROCESS:
         {
             int proceso;
-            liberarMemoria(proceso);
-            eliminarSWAP(proceso);
+            // liberarMemoria(proceso);
+            // eliminarSWAP(proceso);
             break;
         }
 
@@ -114,54 +113,55 @@ static void procesar_conexion(void *void_args)
         {
             // No intuyo parametros ni tipo de dato
             int tabla;
-            tabla = acceso();
+            // tabla = acceso();
             if (tabla == PRIMER_NIVEL)
             {
-                return segundoNivel(tabla);
+                // return 0;
+                // return segundoNivel(tabla);
             }
             else if (tabla == SEGUNDO_NIVEL)
             {
-                if (bitPresencia(tabla) == 0)
+                if (0) // bitPresencia(tabla) == 0)
                 {
-                    if (cargarEnMarco(tabla) != 1)
+                    if (0) // cargarEnMarco(tabla) != 1)
                     {
-                        fallar("No se pudo cargar la tabla en un marco");
+                        // fallar("No se pudo cargar la tabla en un marco");
                     }
                 }
-                return marco(tabla);
+                // return marco(tabla);
             }
             else
             {
-                fallar("Tabla no reconocida");
+                // fallar("Tabla no reconocida");
             }
             break;
         }
 
         case ACCESS_TO_USER_SPACE_READ:
         {
-            return valorEnPosicion(posicion);
+            // return valorEnPosicion(posicion);
         }
         case ACCESS_TO_USER_SPACE_WRITE:
         {
-            if (escribirEn(posicion) == 0)
+            if (0) // escribirEn(posicion) == 0)
             {
-                fallar("No se pudo escribir en la posicion %d porque...", posicion);
+                // fallar("No se pudo escribir en la posicion %d porque...", posicion);
                 break;
             }
-            log("Se escribrio correctamente en la posicion %d", posicion);
+            // log("Se escribrio correctamente en la posicion %d", posicion);
             break;
         }
 
         // Errores
         case -1:
-            log_error(logger, "Cliente desconectado de Memory...");
+            // log_error(logger, "Cliente desconectado de Memory...");
             return;
         default:
-            log_error(logger, "Algo anduvo mal en el server de la Memory");
+            // log_error(logger, "Algo anduvo mal en el server de la Memory");
             return;
         }
     }
-    log_warning(logger, "El cliente se desconecto de %s server", server_name);
+    // log_warning(logger, "El cliente se desconecto de %s server", server_name);
     return;
 }
 
@@ -172,7 +172,7 @@ int server_escuchar(char *server_name, int server_socket)
     if (cliente_socket != -1)
     {
         pthread_t hilo;
-        t_procesar_conexion *args = malloc(sizeof(t_procesar_conexion_args));
+        t_procesar_conexion *args = malloc(sizeof(t_procesar_conexion));
         args->fd = cliente_socket;
         args->server_name = server_name;
         pthread_create(&hilo, NULL, (void *)procesar_conexion, (void *)args);
