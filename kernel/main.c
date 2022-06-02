@@ -12,6 +12,19 @@ void sighandler(int s)
 
 int main()
 {
+    t_log *logger2;
+    printf("prueba\n");
+    logger2 = log_create("memory.log", MODULENAME, false, LOG_LEVEL_INFO);
+    log_info(logger2, "PRUEBA");
+    printf("hola\n");
+
+    if (!init() || !cargar_configuracion("kernel.config"))
+    // cada función va a hacer su operación, si las tres fallan, se cierra la app
+    {
+        cerrar_programa();
+        return EXIT_FAILURE;
+    }
+
     char *ip;
     char *puerto;
 
