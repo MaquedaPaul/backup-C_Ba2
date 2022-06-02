@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "init_memory.h": "c"
+        "init_memory.h": "c",
+        "estructuras.h": "c"
     }
 }
