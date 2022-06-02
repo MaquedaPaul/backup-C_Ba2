@@ -15,6 +15,7 @@ typedef struct
     uint16_t program_counter;
     float estimacion_rafaga;
 } t_PCB;
+
 typedef struct
 {
     char *nombre;
