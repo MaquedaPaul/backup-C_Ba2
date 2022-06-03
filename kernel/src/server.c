@@ -38,6 +38,15 @@ static void procesar_conexion(void *void_args)
                 break;
             }
             printf("Handshake recibido, %i", apreton);
+            uint32_t finalizate = 1;
+            uint32_t no_finalizate = 0;
+            if (!sendHandShake(cliente_socket, apreton))
+            {
+                log_error(logger, "Fallo enviando finalizate");
+                break;
+            }
+            log_error(logger, "se envio %i\n", apreton);
+            printf("Finalizacion enviada, %i", apreton);
         }
 
             /*
@@ -141,6 +150,7 @@ int server_escuchar(t_log *logger, char *server_name, int server_socket)
         pthread_detach(hilo);
         return 1;
     }
+
     return 0;
 }
 /*

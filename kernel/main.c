@@ -26,18 +26,20 @@ int main()
     logger = log_create("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
 
     // ****** CREACION DEL SERVIDOR ******
-    /*
-        char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
-        log_info(logger, "Cargado puerto %s", puerto);
-        kernel_server = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
-        log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
 
-        while (server_escuchar(logger, SERVERNAME, kernel_server))
-            ;
-        liberar_conexion(kernel_server);
-        */
+    char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
+    log_info(logger, "Cargado puerto %s", puerto);
+    kernel_server = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
+    log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
+
+    while (server_escuchar(logger, SERVERNAME, kernel_server))
+    {
+    };
+    liberar_conexion(kernel_server);
+
     /////////////////////////////////////////////////////////
     // fd significa file descriptor. Es el socket
+    /*
     if (!generar_conexion_cpu_dispatch(logger, &fd_cpu_dispatch))
     {
         cerrar_programa(logger);
@@ -65,7 +67,7 @@ int main()
     {
         printf("codigo de op no reconocido");
     }
-
+*/
     // Prueba como cliente de CPU
 
     cerrar_programa(logger);
