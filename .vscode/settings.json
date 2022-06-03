@@ -8,6 +8,7 @@
         "string.h": "c",
         "protocolo.h": "c",
         "init_cpu.h": "c",
-        "manager.h": "c"
+        "manager.h": "c",
+        "inttypes.h": "c"
     }
 }
