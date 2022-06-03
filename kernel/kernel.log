@@ -1,0 +1,6 @@
+[ERROR] 17:21:26:487 KERNEL/(10891:10891): No se encontro memory.config
+[INFO] 17:35:57:307 KERNEL/(12875:12875): Archivo de configuracion cargado correctamente
+[INFO] 17:35:57:312 KERNEL/(12875:12875): Cargado puerto 8000
+[INFO] 17:35:57:312 KERNEL/(12875:12875): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 17:35:57:313 KERNEL/(12875:12875): Iniciando servidor con la IP:PORT 127.0.0.1:8000
