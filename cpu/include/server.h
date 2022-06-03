@@ -10,7 +10,7 @@
 #include "../../shared/include/sockets.h"
 #include "../../shared/include/protocolo.h"
 
-int server_escuchar_cpu(t_log *logger, char *server_name, int server_socket);
+int server_escuchar(t_log *logger, char *server_name, int server_socket);
 
 typedef struct
 {

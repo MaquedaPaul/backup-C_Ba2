@@ -125,7 +125,7 @@ static void procesar_conexion(void *void_args)
     return;
 }
 
-int server_escuchar_cpu(t_log *logger, char *server_name, int server_socket)
+int server_escuchar(t_log *logger, char *server_name, int server_socket)
 {
     int cliente_socket = esperar_cliente(logger, server_name, server_socket);
 
