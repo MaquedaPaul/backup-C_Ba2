@@ -21,7 +21,7 @@ int main()
     }
 
     // ****** CREACION DEL SERVIDOR ******
-
+    // PENDIENTE HARDCODE
     char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
     log_info(logger, "Cargado puerto %s", puerto);
     memory_server = iniciar_servidor(logger, SERVERNAME, "0.0.0.0", puerto);
