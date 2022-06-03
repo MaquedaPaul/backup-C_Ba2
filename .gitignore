@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 #logs y configs
-*.log
-*.config
-console/console.log
+#*.log
+#*.config
+#console/console.log
 .vscode/c_cpp_properties.json
