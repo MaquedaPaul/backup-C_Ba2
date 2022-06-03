@@ -1,6 +1,5 @@
 #include "../include/estructuras.h"
 
-/*
 static t_PCB *iniciar_pcb(uint8_t unPID, t_list unasInstrucciones, uint64_t processSize, uint16_t pc, float estimacion)
 {
     // Inicializo en NULL para no tener basura
@@ -15,10 +14,10 @@ static t_PCB *iniciar_pcb(uint8_t unPID, t_list unasInstrucciones, uint64_t proc
     return pcb;
 }
 
-static t_instruccion *iniciar_instruccion(char *unaInstruccion, uint32_t unCampo1, uint32_t unCampo2)
+static t_instruccion *iniciar_instruccion(cod_instruccion unaInstruccion, uint32_t unCampo1, uint32_t unCampo2)
 {
     t_instruccion *instruccion = malloc(sizeof(t_instruccion));
-    instruccion->nombre = unaInstruccion;
+    instruccion->coi = unaInstruccion;
     instruccion->campo1 = unCampo1;
     instruccion->campo2 = unCampo2;
     return instruccion;
@@ -45,4 +44,3 @@ void asignarPID(int pid, t_PCB *pcb)
 {
     pcb->PID = pid;
 }
-*/

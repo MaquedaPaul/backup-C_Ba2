@@ -142,7 +142,8 @@ bool recv_dos_uint32_t(int fd, uint32_t *param1, uint32_t *param2)
     free(stream);
     return true;
 }
-
+/////////////////////////////
+/*
 bool send_exit(int fd)
 {
     op_code cop = EXIT;
@@ -150,6 +151,8 @@ bool send_exit(int fd)
         return false;
     return true;
 }
+*/
+/////////////////////////////////
 
 // NO es necesario hacer un recv_exit pq no recibe nada, el op_code ya lo tengo
 

@@ -23,16 +23,6 @@ typedef enum
     ACCESS_TO_USER_SPACE_WRITE = 7
 } op_code;
 
-typedef enum
-{
-    NO_OP = 1,
-    IO,
-    READ,
-    COPY,
-    WRITE,
-    EXIT = 6
-} cod_instruccion;
-
 static void *serializar_uint32_t(uint32_t cantidad, op_code codigoOperacion);
 /*  @NAME: serializar_uint32_t
     @DESC: Me va a servir para serializar NO_OP, I/O , READ. Es una funcion aux para el send
