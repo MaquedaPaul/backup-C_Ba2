@@ -9,7 +9,7 @@ OBJ = $(SRC:%.c=./obj/%.o)
 SHARED = $(shell find ../shared/obj/*.o)
 
 build: makefolder makeshared $(OBJ)
-	$(CC) -o $(OUTFILE) main.c $(OBJ) $(SHARED) $(LINK)
+	$(CC) -o $(OUTFILE) main.c -g $(OBJ) $(SHARED) $(LINK)
 
 valgrind: build
 	valgrind --leak-check=full --show-leak-kinds=all --log-file=valgrind.log ./$(OUTFILE)
