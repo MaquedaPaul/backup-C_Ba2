@@ -10,6 +10,11 @@
         "init_cpu.h": "c",
         "manager.h": "c",
         "inttypes.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "init.h": "c",
+        "utils.h": "c",
+        "main.h": "c",
+        "init_console.h": "c",
+        "stdlib.h": "c"
     }
 }
