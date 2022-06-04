@@ -12,5 +12,6 @@
 #include "../../shared/include/protocolo.h"
 
 int server_escuchar(t_log *logger, char *server_name, int server_socket);
-
+void kernel_escuchando(void *arguments);
+void server_escuchar_v2(t_log *logger, char *server_name, int server_socket);
 #endif

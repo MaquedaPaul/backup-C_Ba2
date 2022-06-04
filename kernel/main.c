@@ -1,5 +1,12 @@
 #include "include/main.h"
 
+typedef struct
+{
+    t_log *log;
+    char *server_name;
+    int fd;
+} arg_struct_kernel;
+
 void sighandler(int s)
 {
     cerrar_programa(logger);
@@ -32,9 +39,15 @@ int main()
     kernel_server = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
     log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
 
-    while (server_escuchar(logger, SERVERNAME, kernel_server))
-    {
-    };
+    arg_struct_kernel *args = malloc(sizeof(arg_struct_kernel));
+    args->log = logger;
+    args->server_name = SERVERNAME;
+    args->fd = kernel_server;
+    pthread_t kernel_server_listening;
+
+    pthread_create(&kernel_server_listening, NULL, (void *)kernel_escuchando, (void *)args);
+    pthread_join(kernel_server_listening, NULL);
+
     liberar_conexion(kernel_server);
 
     /////////////////////////////////////////////////////////

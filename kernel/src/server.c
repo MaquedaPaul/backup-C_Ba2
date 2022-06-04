@@ -7,6 +7,13 @@ typedef struct
     char *server_name;
 } t_procesar_conexion_args;
 
+typedef struct
+{
+    t_log *logger;
+    char *server_name;
+    int fd;
+} arg_struct_kernel;
+
 static void procesar_conexion(void *void_args)
 {
     t_procesar_conexion_args *args = (t_procesar_conexion_args *)void_args;
@@ -153,6 +160,41 @@ int server_escuchar(t_log *logger, char *server_name, int server_socket)
 
     return 0;
 }
+
+void server_escuchar_v2(t_log *logger, char *server_name, int server_socket)
+{
+    while (1)
+    {
+        int cliente_socket = esperar_cliente(logger, server_name, server_socket);
+
+        if (cliente_socket != -1)
+        {
+            pthread_t hilo;
+            t_procesar_conexion_args *args = malloc(sizeof(t_procesar_conexion_args));
+            args->log = logger;
+            args->fd = cliente_socket;
+            args->server_name = server_name;
+            pthread_create(&hilo, NULL, (void *)procesar_conexion, (void *)args);
+            pthread_detach(hilo);
+        }
+    }
+}
+
+void kernel_escuchando(void *arguments)
+{
+    arg_struct_kernel *args = arguments;
+    t_log *logger = args->logger;
+    int server_socket = args->fd;
+    char *server_name = args->server_name;
+    /*
+     t_log *unLogger = args->logger;
+     char *server_name = args->server_name;
+     int fd = args->fd;
+     */
+
+    server_escuchar_v2(logger, server_name, server_socket);
+}
+
 /*
 int generar_conexiones(t_log *logger, char *server_name, int server_socket){
 
