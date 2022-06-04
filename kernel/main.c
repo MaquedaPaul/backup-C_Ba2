@@ -13,6 +13,8 @@ void sighandler(int s)
     exit(0);
 }
 
+char *ip = "127.0.0.1";
+
 int main()
 {
     /*
@@ -33,11 +35,10 @@ int main()
     logger = log_create("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
 
     // ****** CREACION DEL SERVIDOR ******
-
     char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
     log_info(logger, "Cargado puerto %s", puerto);
-    kernel_server = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
-    log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
+    log_info(logger, "Iniciando servidor con la IP:PORT %s:%s", ip, puerto);
+    kernel_server = iniciar_servidor(logger, SERVERNAME, ip, puerto);
 
     arg_struct_kernel *args = malloc(sizeof(arg_struct_kernel));
     args->log = logger;

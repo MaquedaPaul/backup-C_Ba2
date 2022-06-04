@@ -45,15 +45,12 @@ static void procesar_conexion(void *void_args)
                 break;
             }
             printf("Handshake recibido, %i", apreton);
-            uint32_t finalizate = 1;
-            uint32_t no_finalizate = 0;
-            if (!sendHandShake(cliente_socket, apreton))
+            if (!sendHandShake(cliente_socket, END_PROCESS))
             {
                 log_error(logger, "Fallo enviando finalizate");
                 break;
             }
-            log_error(logger, "se envio %i\n", apreton);
-            printf("Finalizacion enviada, %i", apreton);
+            log_info(logger, "Finalizacion enviada, %i", END_PROCESS);
         }
 
             /*
