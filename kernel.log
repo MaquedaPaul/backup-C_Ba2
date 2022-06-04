@@ -1,0 +1,64 @@
+[ERROR] 23:47:48:110 KERNEL/(24278:24278): No se encontro memory.config
+[ERROR] 23:48:34:443 KERNEL/(24512:24512): No se encontro memory.config
+[ERROR] 23:49:07:307 KERNEL/(24715:24715): No se encontro memory.config
+[ERROR] 23:50:34:280 KERNEL/(25107:25107): No se encontro memory.config
+[ERROR] 23:50:50:666 KERNEL/(25298:25298): No se encontro memory.config
+[ERROR] 23:52:23:828 KERNEL/(25593:25593): No se encontro memory.config
+[ERROR] 00:16:47:249 KERNEL/(28143:28143): No se encontro memory.config
+[ERROR] 02:47:48:477 KERNEL/(7537:7537): No se encontro memory.config
+[ERROR] 02:48:42:372 KERNEL/(7904:7904): No se encontro memory.config
+[INFO] 02:49:57:561 KERNEL/(8222:8222): Archivo de configuracion cargado correctamente
+[INFO] 02:50:10:414 KERNEL/(8222:8222): Cargado puerto 8000
+[INFO] 02:50:13:083 KERNEL/(8222:8222): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 02:50:15:211 KERNEL/(8222:8222): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 02:51:31:808 KERNEL/(8595:8595): Archivo de configuracion cargado correctamente
+[INFO] 02:51:34:042 KERNEL/(8595:8595): Cargado puerto 8000
+[INFO] 02:51:34:935 KERNEL/(8595:8595): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 02:51:35:365 KERNEL/(8595:8595): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:19:12:591 KERNEL/(11506:11506): Archivo de configuracion cargado correctamente
+[INFO] 03:19:15:273 KERNEL/(11506:11506): Cargado puerto 8000
+[INFO] 03:19:16:050 KERNEL/(11506:11506): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:19:16:471 KERNEL/(11506:11506): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:20:43:707 KERNEL/(11891:11891): Archivo de configuracion cargado correctamente
+[INFO] 03:20:45:631 KERNEL/(11891:11891): Cargado puerto 8000
+[INFO] 03:20:46:158 KERNEL/(11891:11891): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:20:46:764 KERNEL/(11891:11891): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:21:32:512 KERNEL/(12124:12124): Archivo de configuracion cargado correctamente
+[INFO] 03:21:34:289 KERNEL/(12124:12124): Cargado puerto 8000
+[INFO] 03:21:34:767 KERNEL/(12124:12124): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:21:35:365 KERNEL/(12124:12124): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:21:48:449 KERNEL/(12333:12333): Archivo de configuracion cargado correctamente
+[INFO] 03:21:49:568 KERNEL/(12333:12333): Cargado puerto 8000
+[INFO] 03:21:49:915 KERNEL/(12333:12333): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:21:50:484 KERNEL/(12333:12333): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:23:06:492 KERNEL/(12610:12610): Archivo de configuracion cargado correctamente
+[INFO] 03:23:08:345 KERNEL/(12610:12610): Cargado puerto 8000
+[INFO] 03:23:08:848 KERNEL/(12610:12610): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:23:09:362 KERNEL/(12610:12610): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:23:36:051 KERNEL/(12817:12817): Archivo de configuracion cargado correctamente
+[INFO] 03:23:37:068 KERNEL/(12817:12817): Cargado puerto 8000
+[INFO] 03:23:37:442 KERNEL/(12817:12817): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:23:37:701 KERNEL/(12817:12817): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:24:00:594 KERNEL/(13022:13022): Archivo de configuracion cargado correctamente
+[INFO] 03:24:01:408 KERNEL/(13022:13022): Cargado puerto 8000
+[INFO] 03:24:01:608 KERNEL/(13022:13022): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:24:01:764 KERNEL/(13022:13022): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:25:12:353 KERNEL/(13285:13285): Archivo de configuracion cargado correctamente
+[INFO] 03:25:14:955 KERNEL/(13285:13285): Cargado puerto 8000
+[INFO] 03:25:15:394 KERNEL/(13285:13285): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:25:15:908 KERNEL/(13285:13285): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 15:11:58:719 KERNEL/(15149:15149): Archivo de configuracion cargado correctamente
+[INFO] 15:12:01:772 KERNEL/(15149:15149): Cargado puerto 8000
+[INFO] 15:12:02:299 KERNEL/(15149:15149): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 15:12:02:856 KERNEL/(15149:15149): Iniciando servidor con la IP:PORT 127.0.0.1:8000

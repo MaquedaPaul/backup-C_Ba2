@@ -1,0 +1,115 @@
+[INFO] 17:45:22:695 MEMORY/(14948:14948): PRUEBA
+[ERROR] 17:45:22:705 MEMORY/(14948:14948): No se encontro memory.config
+[INFO] 17:45:22:707 MEMORY/(14948:14948): Finalizando el programa (...)
+[INFO] 17:50:55:453 MEMORY/(16303:16303): PRUEBA
+[INFO] 17:50:55:466 MEMORY/(16303:16303): Archivo de configuracion cargado correctamente
+[INFO] 17:50:55:470 MEMORY/(16303:16303): Cargado puerto 8002
+[INFO] 17:50:55:471 MEMORY/(16303:16303): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 17:50:55:473 MEMORY/(16303:16303): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 17:50:55:474 MEMORY/(16303:16303): Escuchando por cliente en 8002
+[INFO] 17:51:57:588 MEMORY/(16680:16680): PRUEBA
+[INFO] 17:51:57:595 MEMORY/(16680:16680): Archivo de configuracion cargado correctamente
+[INFO] 17:51:57:598 MEMORY/(16680:16680): Cargado puerto 8002
+[INFO] 17:51:57:599 MEMORY/(16680:16680): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 17:51:57:599 MEMORY/(16680:16680): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 17:51:57:600 MEMORY/(16680:16680): Escuchando por cliente en 8002
+[INFO] 17:54:26:689 MEMORY/(17157:17157): PRUEBA
+[INFO] 17:54:26:706 MEMORY/(17157:17157): Archivo de configuracion cargado correctamente
+[INFO] 17:54:26:710 MEMORY/(17157:17157): Cargado puerto 8002
+[INFO] 17:54:26:713 MEMORY/(17157:17157): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 17:54:26:714 MEMORY/(17157:17157): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 17:54:26:716 MEMORY/(17157:17157): Escuchando por cliente en 8002
+[INFO] 18:01:46:927 MEMORY/(18234:18234): PRUEBA
+[INFO] 18:01:46:942 MEMORY/(18234:18234): Archivo de configuracion cargado correctamente
+[INFO] 18:01:46:951 MEMORY/(18234:18234): Cargado puerto 8002
+[INFO] 18:01:46:958 MEMORY/(18234:18234): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 18:01:46:959 MEMORY/(18234:18234): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 18:01:46:966 MEMORY/(18234:18234): Escuchando por cliente en 8002
+[INFO] 18:04:55:449 MEMORY/(18615:18615): PRUEBA
+[INFO] 18:04:55:462 MEMORY/(18615:18615): Archivo de configuracion cargado correctamente
+[INFO] 18:04:55:466 MEMORY/(18615:18615): Cargado puerto 8002
+[INFO] 18:04:55:468 MEMORY/(18615:18615): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 18:04:55:469 MEMORY/(18615:18615): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 18:04:55:470 MEMORY/(18615:18615): Escuchando por cliente en 8002
+[INFO] 18:31:07:531 MEMORY/(22557:22557): PRUEBA
+[INFO] 18:31:07:555 MEMORY/(22557:22557): Archivo de configuracion cargado correctamente
+[INFO] 18:31:07:562 MEMORY/(22557:22557): Cargado puerto 8002
+[INFO] 18:31:07:567 MEMORY/(22557:22557): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 18:31:07:570 MEMORY/(22557:22557): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 18:31:07:583 MEMORY/(22557:22557): Escuchando por cliente en 8002
+[INFO] 20:19:14:479 MEMORY/(30955:30955): PRUEBA
+[INFO] 20:19:14:499 MEMORY/(30955:30955): Archivo de configuracion cargado correctamente
+[INFO] 20:19:14:505 MEMORY/(30955:30955): Cargado puerto 8002
+[INFO] 20:19:14:506 MEMORY/(30955:30955): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:19:14:508 MEMORY/(30955:30955): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:19:14:509 MEMORY/(30955:30955): Escuchando por cliente en 8002
+[INFO] 20:19:57:009 MEMORY/(31167:31167): PRUEBA
+[INFO] 20:19:57:020 MEMORY/(31167:31167): Archivo de configuracion cargado correctamente
+[INFO] 20:19:57:024 MEMORY/(31167:31167): Cargado puerto 8002
+[INFO] 20:19:57:025 MEMORY/(31167:31167): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:19:57:026 MEMORY/(31167:31167): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:19:57:027 MEMORY/(31167:31167): Escuchando por cliente en 8002
+[INFO] 20:24:01:167 MEMORY/(31657:31657): PRUEBA
+[INFO] 20:24:01:181 MEMORY/(31657:31657): Archivo de configuracion cargado correctamente
+[INFO] 20:24:01:184 MEMORY/(31657:31657): Cargado puerto 8002
+[INFO] 20:24:01:185 MEMORY/(31657:31657): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:24:01:187 MEMORY/(31657:31657): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:24:01:189 MEMORY/(31657:31657): Escuchando por cliente en 8002
+[INFO] 20:25:18:760 MEMORY/(31881:31881): PRUEBA
+[INFO] 20:25:18:772 MEMORY/(31881:31881): Archivo de configuracion cargado correctamente
+[INFO] 20:25:18:775 MEMORY/(31881:31881): Cargado puerto 8002
+[INFO] 20:25:18:777 MEMORY/(31881:31881): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:25:18:778 MEMORY/(31881:31881): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:25:18:779 MEMORY/(31881:31881): Escuchando por cliente en 8002
+[INFO] 20:26:23:598 MEMORY/(32161:32161): PRUEBA
+[INFO] 20:26:23:609 MEMORY/(32161:32161): Archivo de configuracion cargado correctamente
+[INFO] 20:26:23:613 MEMORY/(32161:32161): Cargado puerto 8002
+[INFO] 20:26:23:615 MEMORY/(32161:32161): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:26:23:617 MEMORY/(32161:32161): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:26:23:618 MEMORY/(32161:32161): Escuchando por cliente en 8002
+[INFO] 20:27:09:307 MEMORY/(32535:32535): PRUEBA
+[INFO] 20:27:09:315 MEMORY/(32535:32535): Archivo de configuracion cargado correctamente
+[INFO] 20:27:09:320 MEMORY/(32535:32535): Cargado puerto 8002
+[INFO] 20:27:09:322 MEMORY/(32535:32535): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:27:09:323 MEMORY/(32535:32535): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:27:09:325 MEMORY/(32535:32535): Escuchando por cliente en 8002
+[INFO] 20:35:57:575 MEMORY/(1035:1035): PRUEBA
+[INFO] 20:35:57:582 MEMORY/(1035:1035): Archivo de configuracion cargado correctamente
+[INFO] 20:35:57:589 MEMORY/(1035:1035): Cargado puerto 8002
+[INFO] 20:35:57:590 MEMORY/(1035:1035): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:35:57:591 MEMORY/(1035:1035): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:35:57:593 MEMORY/(1035:1035): Escuchando por cliente en 8002
+[INFO] 20:36:07:681 MEMORY/(1226:1226): PRUEBA
+[INFO] 20:36:07:692 MEMORY/(1226:1226): Archivo de configuracion cargado correctamente
+[INFO] 20:36:07:696 MEMORY/(1226:1226): Cargado puerto 8002
+[INFO] 20:36:07:698 MEMORY/(1226:1226): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:36:07:699 MEMORY/(1226:1226): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:36:07:700 MEMORY/(1226:1226): Escuchando por cliente en 8002
+[INFO] 20:37:03:439 MEMORY/(1419:1419): PRUEBA
+[INFO] 20:37:13:538 MEMORY/(1419:1419): Archivo de configuracion cargado correctamente
+[INFO] 20:37:13:551 MEMORY/(1419:1419): Cargado puerto 8002
+[INFO] 20:37:13:552 MEMORY/(1419:1419): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:37:13:554 MEMORY/(1419:1419): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:37:13:555 MEMORY/(1419:1419): Escuchando por cliente en 8002
+[INFO] 20:53:16:705 MEMORY/(3794:3794): PRUEBA
+[INFO] 20:53:16:724 MEMORY/(3794:3794): Archivo de configuracion cargado correctamente
+[INFO] 20:53:16:728 MEMORY/(3794:3794): Cargado puerto 8002
+[INFO] 20:53:16:730 MEMORY/(3794:3794): Escuchando en 0.0.0.0:8002 (MEMORY_SERVER)
+
+[INFO] 20:53:16:731 MEMORY/(3794:3794): Iniciando servidor con la IP:PORT 0.0.0.0:8002
+[INFO] 20:53:16:732 MEMORY/(3794:3794): Escuchando por cliente en 8002

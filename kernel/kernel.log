@@ -1,6 +1,84 @@
-[ERROR] 17:21:26:487 KERNEL/(10891:10891): No se encontro memory.config
-[INFO] 17:35:57:307 KERNEL/(12875:12875): Archivo de configuracion cargado correctamente
-[INFO] 17:35:57:312 KERNEL/(12875:12875): Cargado puerto 8000
-[INFO] 17:35:57:312 KERNEL/(12875:12875): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+[INFO] 00:05:12:018 KERNEL/(26689:26689): Archivo de configuracion cargado correctamente
+[INFO] 00:05:12:019 KERNEL/(26689:26689): Cargado puerto 8000
+[INFO] 00:05:12:019 KERNEL/(26689:26689): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
 
-[INFO] 17:35:57:313 KERNEL/(12875:12875): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 00:05:12:020 KERNEL/(26689:26689): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 00:11:08:169 KERNEL/(27136:27136): Archivo de configuracion cargado correctamente
+[INFO] 00:11:08:169 KERNEL/(27136:27136): Cargado puerto 8000
+[INFO] 00:11:08:170 KERNEL/(27136:27136): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 00:11:08:170 KERNEL/(27136:27136): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 00:11:20:447 KERNEL/(27152:27152): Archivo de configuracion cargado correctamente
+[INFO] 00:11:20:448 KERNEL/(27152:27152): Cargado puerto 8000
+[INFO] 00:11:20:448 KERNEL/(27152:27152): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 00:11:20:449 KERNEL/(27152:27152): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 03:19:42:688 KERNEL/(11593:11593): Archivo de configuracion cargado correctamente
+[INFO] 03:19:42:699 KERNEL/(11593:11593): Cargado puerto 8000
+[INFO] 03:19:42:699 KERNEL/(11593:11593): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 03:19:42:699 KERNEL/(11593:11593): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 14:59:57:537 KERNEL/(14328:14328): Archivo de configuracion cargado correctamente
+[INFO] 14:59:57:545 KERNEL/(14328:14328): Cargado puerto 8000
+[INFO] 14:59:57:546 KERNEL/(14328:14328): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 14:59:57:546 KERNEL/(14328:14328): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 15:04:42:919 KERNEL/(14586:14586): Archivo de configuracion cargado correctamente
+[INFO] 15:04:43:112 KERNEL/(14586:14586): Cargado puerto 8000
+[INFO] 15:04:43:112 KERNEL/(14586:14586): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 15:04:43:112 KERNEL/(14586:14586): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 15:06:24:303 KERNEL/(14690:14690): Archivo de configuracion cargado correctamente
+[INFO] 15:06:24:304 KERNEL/(14690:14690): Cargado puerto 8000
+[INFO] 15:06:24:304 KERNEL/(14690:14690): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 15:06:24:304 KERNEL/(14690:14690): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 15:14:00:151 KERNEL/(15328:15328): Archivo de configuracion cargado correctamente
+[INFO] 15:14:00:151 KERNEL/(15328:15328): Cargado puerto 8000
+[INFO] 15:14:00:152 KERNEL/(15328:15328): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 15:14:00:152 KERNEL/(15328:15328): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 15:16:08:639 KERNEL/(15457:15457): Archivo de configuracion cargado correctamente
+[INFO] 15:16:08:639 KERNEL/(15457:15457): Cargado puerto 8000
+[INFO] 15:16:08:640 KERNEL/(15457:15457): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 15:16:08:640 KERNEL/(15457:15457): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 15:16:25:639 KERNEL/(15457:15458): Cliente conectado (a KERNEL_SERVER)
+
+[ERROR] 15:16:25:649 KERNEL/(15457:15488): se envio 5
+
+[ERROR] 15:16:25:649 KERNEL/(15457:15488): Cliente desconectado de KERNEL_SERVER...
+[INFO] 16:51:18:059 KERNEL/(19457:19457): Archivo de configuracion cargado correctamente
+[INFO] 16:51:18:075 KERNEL/(19457:19457): Cargado puerto 8000
+[INFO] 16:51:18:075 KERNEL/(19457:19457): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 16:51:18:076 KERNEL/(19457:19457): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 16:52:05:640 KERNEL/(19457:19458): Cliente conectado (a KERNEL_SERVER)
+
+[ERROR] 16:52:05:641 KERNEL/(19457:19511): se envio 5
+
+[ERROR] 16:52:05:642 KERNEL/(19457:19511): Cliente desconectado de KERNEL_SERVER...
+[INFO] 16:52:48:311 KERNEL/(19688:19688): Archivo de configuracion cargado correctamente
+[INFO] 16:52:48:312 KERNEL/(19688:19688): Cargado puerto 8000
+[INFO] 16:52:48:312 KERNEL/(19688:19688): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 16:52:48:312 KERNEL/(19688:19688): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 16:52:55:456 KERNEL/(19688:19689): Cliente conectado (a KERNEL_SERVER)
+
+[INFO] 16:53:27:567 KERNEL/(19736:19736): Archivo de configuracion cargado correctamente
+[INFO] 16:53:27:567 KERNEL/(19736:19736): Cargado puerto 8000
+[INFO] 16:53:27:568 KERNEL/(19736:19736): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 16:53:27:568 KERNEL/(19736:19736): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 16:53:29:864 KERNEL/(19736:19737): Cliente conectado (a KERNEL_SERVER)
+
+[INFO] 16:57:43:572 KERNEL/(20056:20056): Archivo de configuracion cargado correctamente
+[INFO] 16:57:43:573 KERNEL/(20056:20056): Cargado puerto 8000
+[INFO] 16:57:43:573 KERNEL/(20056:20056): Escuchando en 127.0.0.1:8000 (KERNEL_SERVER)
+
+[INFO] 16:57:43:573 KERNEL/(20056:20056): Iniciando servidor con la IP:PORT 127.0.0.1:8000
+[INFO] 16:57:50:357 KERNEL/(20056:20057): Cliente conectado (a KERNEL_SERVER)
+
+[ERROR] 16:57:50:358 KERNEL/(20056:20081): se envio 5
+
+[ERROR] 16:57:50:358 KERNEL/(20056:20081): Cliente desconectado de KERNEL_SERVER...
