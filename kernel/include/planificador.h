@@ -1,0 +1,14 @@
+#include <commons/collections/list.h>
+#include <commons/log.h>
+#include "../include/planificador_corto.h"
+#include "../include/planificador_mediano.h"
+#include "../include/planificador_largo.h"
+#include "../shared/include/estructuras.h"
+#include "../include/init_kernel.h"
+t_list *procesosNuevos;
+t_list *procesosReady;
+t_list *procesosBlock;
+t_list *procesosExec;
+t_list *procesosSuspendedBlock;
+t_list *procesosSuspendedReady;
+t_list *procesosEnd;
