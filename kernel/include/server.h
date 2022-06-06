@@ -7,7 +7,8 @@
 #include <inttypes.h>
 #include <commons/log.h>
 #include <stdint.h> //Distintos tipos de INT
-
+#include "../include/init_kernel.h"
+#include "../include/planificador.h"
 #include "../../shared/include/sockets.h"
 #include "../../shared/include/protocolo.h"
 

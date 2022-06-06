@@ -1,15 +1,22 @@
 #include "../include/estructuras.h"
 
-static t_PCB *iniciar_pcb(uint8_t unPID, t_list unasInstrucciones, uint64_t processSize, uint16_t pc, float estimacion)
+static t_PCB *iniciar_pcb(uint8_t unPID, t_list unasInstrucciones, uint64_t processSize, float estimacion)
 {
     // Inicializo en NULL para no tener basura
     // Debe asignarse valores distintos a estos.
+
     t_PCB *pcb = malloc(sizeof(t_PCB));
+    const int pc = 0;
     pcb->PID = unPID;
+    log_info(logger_kernel, "Se cargo el PID %i", unPID);
     pcb->process_size = processSize;
+    log_info(logger_kernel, "Se cargo el processSize %i", processSize);
     pcb->instrucciones = unasInstrucciones;
+    log_info(logger_kernel, "Se cargaron las instrucciones");
     pcb->program_counter = pc;
+    log_info(logger_kernel, "Se cargo el pc %i", pc);
     pcb->estimacion_rafaga = estimacion;
+    log_info(logger_kernel, "Se cargo la estimacion %f", estimacion); // ERROR PQ NO ES FLOAT
     // falta direccion tabla de paginas.
     return pcb;
 }

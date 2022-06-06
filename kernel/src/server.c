@@ -52,6 +52,21 @@ static void procesar_conexion(void *void_args)
             }
             log_info(logger, "Finalizacion enviada, %i", END_PROCESS);
         }
+        case INICIALIZAR_PROCESO:
+        {
+            if (inicializarProceso(cliente_socket))
+            {
+                // levanto hilo para que lo pase segun grado de multiprogramacion
+                if (!hiloPlanificadorLargoLevantado)
+                {
+                    levantarHiloLargoPlazo();
+                }
+            }
+            else
+            {
+                log_error(logger, "No se pudo inicializar el proceso de PID %i,", cliente_socket);
+            }
+        }
 
             /*
                     case NO_OP:
@@ -138,7 +153,7 @@ static void procesar_conexion(void *void_args)
     log_warning(logger, "El cliente se desconecto de %s server", server_name);
     return;
 }
-
+/*
 int server_escuchar(t_log *logger, char *server_name, int server_socket)
 {
     int cliente_socket = esperar_cliente(logger, server_name, server_socket);
@@ -157,7 +172,7 @@ int server_escuchar(t_log *logger, char *server_name, int server_socket)
 
     return 0;
 }
-
+*/
 void server_escuchar_v2(t_log *logger, char *server_name, int server_socket)
 {
     while (1)
