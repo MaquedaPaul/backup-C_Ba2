@@ -2,7 +2,7 @@
 
 // Conexiones
 // Kernel
-
+char *ip = "127.0.0.1";
 int main()
 {
     t_log *logger2;
@@ -26,8 +26,8 @@ int main()
     char *puerto = string_itoa(cfg->PUERTO_ESCUCHA_DISPATCH);
     // char *ip = string_itoa("127.0.0.1");
     log_info(logger, "Cargado puerto %s", puerto);
-    cpu_server = iniciar_servidor(logger, SERVERNAME, "127.0.0.1", puerto);
-    log_info(logger, "Iniciando servidor con la IP:PORT 127.0.0.1:%s", puerto);
+    log_info(logger, "Iniciando servidor con la IP:PORT %s:%s", ip, puerto);
+    cpu_server = iniciar_servidor(logger, SERVERNAME, ip, puerto);
 
     while (server_escuchar(logger, SERVERNAME, cpu_server))
         ;
