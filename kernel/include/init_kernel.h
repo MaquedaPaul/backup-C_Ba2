@@ -6,10 +6,14 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include "../../shared/include/utils.h"
+#include "../../shared/include/estructuras.h"
 #include <stdlib.h>
 #include <string.h>
 #include <commons/string.h>
 #include "../../shared/include/sockets.h"
+#include <stdbool.h>
+#include <commons/collections/list.h>
+
 typedef struct
 {
     uint32_t IP_MEMORIA;

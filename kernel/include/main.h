@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
+#include "../include/init_kernel.h"
 #include <commons/log.h>
 #include <commons/string.h>
-#include "../include/init_kernel.h"
 #include "../include/cliente_cpu.h"
 #include "server.h"
 #include <stdlib.h>
@@ -14,6 +14,10 @@
 #include "../../shared/include/manager.h"
 
 #define SERVERNAME "KERNEL_SERVER"
+
+extern bool hiloPlanificadorLargoLevantado;
+extern bool hiloPlanificadorCortoLevantado;
+extern bool hiloPlanificadorMedianoPlazoLevantado;
 t_log *logger;
 int kernel_server;
 int pid_actual = 0;

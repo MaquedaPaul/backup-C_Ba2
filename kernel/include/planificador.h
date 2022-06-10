@@ -1,9 +1,6 @@
-#include <commons/collections/list.h>
-#include <commons/log.h>
-#include "../include/planificador_corto.h"
-#include "../include/planificador_mediano.h"
-#include "../include/planificador_largo.h"
-#include "../shared/include/estructuras.h"
+#ifndef PLANIFICADOR_KERNEL_H
+#define PLANIFICADOR_KERNEL_H
+
 #include "../include/init_kernel.h"
 t_list *procesosNuevos;
 t_list *procesosReady;
@@ -12,3 +9,21 @@ t_list *procesosExec;
 t_list *procesosSuspendedBlock;
 t_list *procesosSuspendedReady;
 t_list *procesosEnd;
+
+pthread_t planificador_largo;
+pthread_t planificador_mediano;
+pthread_t planificador_corto;
+int numero;
+
+typedef struct
+{
+    t_PCB *unaPCB;
+    bool estaSuspendido;
+} t_proceso;
+
+int cantidadProcesosEnMP();
+int cantidadProcesosEnReady();
+int cantidadProcesosEnBloqueado();
+int cantidadProcesosEnEjecutando();
+int cantidadProcesosEnUnaLista(t_list *unaLista);
+#endif // PLANIFICADOR_KERNEL_H
