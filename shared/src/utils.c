@@ -9,3 +9,15 @@ bool config_has_all_properties(t_config *cfg, char **properties)
     }
     return true;
 }
+
+void cortarPrimerElementoDeUnaListaYPegarloEnOtra(t_list *unaLista, t_list *otraLista)
+{
+    if (!unaListaEstaVacia(unaLista))
+    {
+        list_add(otraLista, list_remove(unaLista, 0));
+    }
+}
+bool unaListaEstaVacia(t_list *unaLista)
+{
+    return list_is_empty(unaLista);
+}
