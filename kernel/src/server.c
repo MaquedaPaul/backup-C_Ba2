@@ -57,9 +57,17 @@ static void procesar_conexion(void *void_args)
             if (inicializarProceso(cliente_socket))
             {
                 // levanto hilo para que lo pase segun grado de multiprogramacion
-                if (!hiloPlanificadorLargoLevantado)
+                if (1) //! hiloPlanificadorLargoLevantado)
                 {
                     levantarHiloLargoPlazo();
+                }
+                if (1) //! hiloPlanificadorCortoLevantado)
+                {
+                    levantarHiloCortoPlazo();
+                }
+                if (1) //! hiloPlanificadorMedianoPlazo)
+                {
+                    levantarHiloMedianoPlazo();
                 }
             }
             else
