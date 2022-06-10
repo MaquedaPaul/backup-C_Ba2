@@ -33,7 +33,9 @@ int main()
 
     // signal(SIGINT, sighandler); // Para poder cerrar correctamente el programa apretando CTRL + C
     logger = log_create("kernel.log", "KERNEL", true, LOG_LEVEL_INFO);
-
+    hiloPlanificadorLargoLevantado = false;
+    hiloPlanificadorCortoLevantado = false;
+    hiloPlanificadorMedianoPlazoLevantado = false;
     // ****** CREACION DEL SERVIDOR ******
     char *puerto = string_itoa(cfg->PUERTO_ESCUCHA);
     log_info(logger, "Cargado puerto %s", puerto);
