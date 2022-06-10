@@ -1,6 +1,6 @@
 #ifndef KERNEL_ESTRUCTURAS_H
 #define KERNEL_ESTRUCTURAS_H
-#include "../../shared/include/estructuras.h"
+//#include "../../shared/include/estructuras.h"
 /*
 #include <inttypes.h> //tipos de int
 #include <commons/config.h>

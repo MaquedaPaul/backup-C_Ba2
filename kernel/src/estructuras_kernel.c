@@ -1,4 +1,4 @@
-#include "../include/estructuras.h"
+#include "../include/estructuras_kernel.h"
 
 /*
 static t_PCB *iniciar_pcb(uint8_t unPID, t_list unasInstrucciones, uint64_t processSize, uint16_t pc, float estimacion)
